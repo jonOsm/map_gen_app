@@ -4,8 +4,6 @@ import GenBPButton from "@/components/GenBPButton"
 import { useState } from "react"
 import { type Grid, TILE } from "@/interfaces/blueprint"
 
-//eventually exposed by MAP_GEN library
-
 function initialGrid(): Grid {
   let grid = [] as Array<Array<TILE>>
   let w = 40
@@ -19,9 +17,8 @@ function initialGrid(): Grid {
   return grid
 }
 
-export default function home() {
+export default function Home() {
   const [grid, setGrid] = useState(initialGrid())
-
   return (
     <main className="flex flex-col items-center justify-center h-screen -my-10">
       <HomeHeader></HomeHeader>

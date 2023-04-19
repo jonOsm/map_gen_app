@@ -6,11 +6,11 @@ interface BlueprintProps {
 }
 
 export default function Blueprint({ grid }: BlueprintProps) {
-  const render = grid.map((row: Array<TILE>) => {
+  const render = grid.map((row: Array<TILE>, i: number) => {
     return (
-      <div className="flex py-0">
-        {row.map((val: TILE) => {
-          return <Tile tileType={val} />
+      <div key={i} className="flex py-0">
+        {row.map((val: TILE, i: number) => {
+          return <Tile key={i} tileType={val} />
         })}
       </div>
     )
