@@ -7,7 +7,7 @@ import Blueprint from "map_gen_ts_dev/lib/blueprint"
 import { BlueprintBuilder } from "map_gen_ts_dev/lib/transformation"
 import { Rect, RectFactory, ShapeConstraint, ShapeType } from "map_gen_ts_dev/lib/shape"
 
-function yeesh() {
+function buildMap() {
   const rectFactory = new RectFactory({
     minW: 4,
     maxW: 10,
@@ -45,10 +45,16 @@ function initialGrid(
 }
 
 export default function Home() {
-  const [grid, setGrid] = useState(yeesh())
+  const [grid, setGrid] = useState(buildMap())
+
+  function handleGenerateMap() {
+    console.log("runing map build")
+    setGrid([...buildMap()])
+  }
+
   return (
     <main className="flex flex-col items-center justify-center h-screen -my-10">
-      <BlueprintComponent grid={grid}></BlueprintComponent>
+      <BlueprintComponent grid={grid} handleGenerateMap={handleGenerateMap}></BlueprintComponent>
     </main>
   )
 }

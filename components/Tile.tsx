@@ -7,7 +7,7 @@ interface TileProps {
 export default function Tile({ tileType, styleMap }: TileProps) {
   return (
     <div
-      className={"w-5 h-5 p2 border border-white " + styleMap[tileType].style}
+      className={"w-5 h-5 border-white " + styleMap[tileType].style}
     ></div>
   )
 }

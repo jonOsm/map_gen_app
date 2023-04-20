@@ -10,9 +10,9 @@ interface LengendProps {
 
 export default function Legend({ styleMap }: LengendProps) {
   return (
-    <>
-      <p>Legend:</p>
-      <div className="flex flex-col gap-2">
+    <div className="flex flex-col">
+      <div>Legend:</div>
+      <div className="flex gap-2">
         {Object.entries(styleMap).map(
           ([key, details]: [string, TileStyleDetails]) => {
             return (
@@ -24,6 +24,7 @@ export default function Legend({ styleMap }: LengendProps) {
           }
         )}
       </div>
-    </>
+    </div>
+
   )
 }
