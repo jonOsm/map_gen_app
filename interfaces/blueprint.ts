@@ -1,8 +1,16 @@
 export enum TILE {
-  VOID = -1,
-  LAND = 0,
-  WALL = 1,
-  FLOOR = 2,
+  VOID,
+  LAND,
+  WALL,
+  FLOOR,
 }
 
 export type Grid = Array<Array<TILE>>
+
+export interface TileStyleDetails {
+  style: string
+  label: string
+}
+export interface TileStyleMap {
+  [s: number]: { style: string; label: string }
+}
