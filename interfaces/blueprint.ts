@@ -1,5 +1,5 @@
 export enum TILE {
-  VOID,
+  // VOID,
   LAND,
   WALL,
   FLOOR,

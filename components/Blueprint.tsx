@@ -10,7 +10,7 @@ interface BlueprintProps {
 
 export default function Blueprint({ grid }: BlueprintProps) {
   const styleMap = {
-    [TILE.VOID]: { style: "bg-black", label: "Void" },
+    // [TILE.VOID]: { style: "bg-black", label: "Void" },
     [TILE.LAND]: { style: "bg-green-600", label: "Land" },
     [TILE.WALL]: { style: "bg-slate-600", label: "Wall" },
     [TILE.FLOOR]: { style: "bg-neutral-600", label: "Floor" },
