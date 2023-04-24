@@ -5,7 +5,12 @@ import { useState } from "react"
 import { type Grid, TILE } from "@/interfaces/blueprint"
 import Blueprint from "map_gen_ts_dev/lib/blueprint"
 import { BlueprintBuilder } from "map_gen_ts_dev/lib/transformation"
-import { Rect, RectFactory, ShapeConstraint, ShapeType } from "map_gen_ts_dev/lib/shape"
+import {
+  Rect,
+  RectFactory,
+  ShapeConstraint,
+  ShapeType,
+} from "map_gen_ts_dev/lib/shape"
 
 function buildMap() {
   const rectFactory = new RectFactory({
@@ -53,8 +58,11 @@ export default function Home() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-center h-screen -my-10">
-      <BlueprintComponent grid={grid} handleGenerateMap={handleGenerateMap}></BlueprintComponent>
+    <main className="flex flex-col items-center justify-center h-screen -my-10 bg-gradient-to-tr from-blue-200">
+      <BlueprintComponent
+        grid={grid}
+        handleGenerateMap={handleGenerateMap}
+      ></BlueprintComponent>
     </main>
   )
 }

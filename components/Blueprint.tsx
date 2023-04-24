@@ -5,7 +5,7 @@ import HomeHeader from "./HomeHeader"
 import GenBPButton from "./GenBPButton"
 
 interface BlueprintProps {
-  grid: Grid,
+  grid: Grid
   handleGenerateMap: Function
 }
 
@@ -22,7 +22,9 @@ export default function Blueprint({ grid, handleGenerateMap }: BlueprintProps) {
       <div key={Math.random()}>
         <div key={i} className="flex py-0">
           {row.map((val: TILE, i: number) => {
-            return <Tile key={Math.random()} tileType={val} styleMap={styleMap} />
+            return (
+              <Tile key={Math.random()} tileType={val} styleMap={styleMap} />
+            )
           })}
         </div>
       </div>

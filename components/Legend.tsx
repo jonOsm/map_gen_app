@@ -17,7 +17,9 @@ export default function Legend({ styleMap }: LengendProps) {
           ([key, details]: [string, TileStyleDetails]) => {
             return (
               <div key={key} className="flex gap-2">
-                <div className={"w-10 h-10 " + details.style}></div>
+                <div
+                  className={"w-5 h-5 sm:w-10 sm:h-10 " + details.style}
+                ></div>
                 <div>{details.label}</div>
               </div>
             )
@@ -25,6 +27,5 @@ export default function Legend({ styleMap }: LengendProps) {
         )}
       </div>
     </div>
-
   )
 }
